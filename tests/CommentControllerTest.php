@@ -3,7 +3,6 @@
 namespace Tests;
 
 use App\CommentClient;
-use HttpException;
 use JsonException;
 use phpmock\Mock;
 use phpmock\MockBuilder;
@@ -12,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class CommentControllerTest extends TestCase
 {
-    const string BASE_URL = 'http://example.com/';
+    const BASE_URL = 'http://example.com/';
     private CommentClient $commentClient;
     private MockBuilder $builder;
 
@@ -80,7 +79,6 @@ class CommentControllerTest extends TestCase
     }
 
     /**
-     * @throws HttpException
      * @throws MockEnabledException
      * @throws JsonException
      */
@@ -105,7 +103,6 @@ class CommentControllerTest extends TestCase
     }
 
     /**
-     * @throws HttpException
      * @throws MockEnabledException
      * @throws JsonException
      */
@@ -123,7 +120,6 @@ class CommentControllerTest extends TestCase
     }
 
     /**
-     * @throws HttpException
      * @throws MockEnabledException
      * @throws JsonException
      */

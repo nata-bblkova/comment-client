@@ -14,7 +14,6 @@
         "php": ">=8.2",
         "phpunit/phpunit": "^11",
         "ext-curl": "*",
-        "ext-http": "*",
         "php-mock/php-mock-phpunit": "^2.10"
     },
     "autoload": {

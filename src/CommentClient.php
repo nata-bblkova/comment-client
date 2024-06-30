@@ -2,7 +2,6 @@
 
 namespace App;
 
-use HttpException;
 use JsonException;
 use RuntimeException;
 
@@ -16,7 +15,6 @@ class CommentClient
     }
 
     /**
-     * @throws HttpException
      * @throws JsonException
      */
     private function sendRequest(string $endpoint, string $method, array $params = []): array
@@ -41,7 +39,7 @@ class CommentClient
 
         $response = curl_exec($curl);
         if ($response === false) {
-            throw new HttpException("Something went wrong while connecting to $this->baseUrl.");
+            throw new RuntimeException("Something went wrong while connecting to $this->baseUrl.");
         }
 
         $data = json_decode($response, true, 512, JSON_THROW_ON_ERROR);
@@ -53,7 +51,6 @@ class CommentClient
     }
 
     /**
-     * @throws HttpException
      * @throws JsonException
      */
     public function getComments(): array
@@ -62,7 +59,6 @@ class CommentClient
     }
 
     /**
-     * @throws HttpException
      * @throws JsonException
      */
     public function postComment(string $name, string $text): array
@@ -71,7 +67,6 @@ class CommentClient
     }
 
     /**
-     * @throws HttpException
      * @throws JsonException
      */
     public function putComment(int $id, string $name, string $text): array
