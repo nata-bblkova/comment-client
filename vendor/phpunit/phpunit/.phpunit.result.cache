@@ -1,1 +1,0 @@
-{"version":1,"defects":{"Tests\\CommentControllerTest::testGetComments":8,"Tests\\CommentControllerTest::testPostComment":8,"Tests\\CommentControllerTest::testPutComment":8},"times":{"Tests\\CommentControllerTest::testGetComments":0.001,"Tests\\CommentControllerTest::testPostComment":0,"Tests\\CommentControllerTest::testPutComment":0}}
